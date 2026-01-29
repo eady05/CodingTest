@@ -1,15 +1,12 @@
 import sys
-
 input = sys.stdin.readline
 
-if __name__ == "__main__":
-  n = int(input())
-  s = []
-  for _ in range(n):
-    a = input().strip()
-    s.append(a)
-  s=list(set(s))
-  s.sort(key=lambda x:(len(x),x))
-
-  for word in s:
-    print(word)
+n = int(input())
+se = set()
+for _ in range(n):
+  s = input().strip()
+  se.add(s)
+se_list = list(se)
+se_list.sort(key= lambda x : (len(x),x))
+for s in se_list:
+  print(s)
